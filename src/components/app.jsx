@@ -9,11 +9,11 @@ class App extends React.Component {
 
     render() {
         return (
-          <div>
+          <React.Fragment>
             <Header/>
             <Main/>
             <Footer/>
-          </div>  
+          </React.Fragment>  
         );
     }
 }

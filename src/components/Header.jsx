@@ -4,7 +4,7 @@ class Header extends React.Component{
 
     render(){
         return(
-            <header>
+            <header className="navbar">
                 <h1>This is a test designed to provoke an emotional response...
                     Shall we continue?
                 </h1>

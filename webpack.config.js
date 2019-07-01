@@ -4,6 +4,17 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     entry: { main: "./src/index.jsx" },
+    output: {
+        path: path.resolve(__dirname, "/dist"),
+        publicPath: "/",
+        filename: "bundle.js"
+    },
+    resolve: {
+        extensions: ["*", ".js", ".jsx"]
+    },
+    devServer: {
+        contentBase: "./dist"
+    },
     module: {
         rules: [
             {
@@ -20,19 +31,8 @@ module.exports = {
                     "css-loader",
                     "sass-loader"
                 ],
-            }
+            },
         ]
-    },
-    resolve: {
-        extensions: ["*", ".js", ".jsx"]
-    },
-    output: {
-        path: path.resolve(__dirname, "/dist"),
-        publicPath: "/",
-        filename: "bundle.js"
-    },
-    devServer: {
-        contentBase: "./dist"
     },
     plugins: [
         new MiniCssExtractPlugin({

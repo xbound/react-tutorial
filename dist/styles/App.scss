@@ -1,9 +1,47 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import "~bulma/bulma";
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
 div#app{
-    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     width: 100%;
     height: 100%;
 
-    h1 {
-        font-size: 5em;
+    header.navbar {
+        display: flex;
+        width: 100%;
+        height: 200px;
+        align-items: center;
+        justify-content: center;
+        background-color: chocolate;
+        box-shadow: 0 0 30px #333;
+
+        h1 {
+            color: white;
+            font-size: 2em;
+        }
     }
+
+    main.main-content {
+        flex: 1;
+        display: flex;
+        padding: 10px;
+    }
+    
+    footer {
+        box-shadow: 0 0 20px #333;
+        height: 200px;
+        background-color: #607D8B;
+    }
+
+
 }
